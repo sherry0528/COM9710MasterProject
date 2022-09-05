@@ -16,12 +16,12 @@ import java.util.ArrayList;
 
 public class DBOpenHelper extends SQLiteOpenHelper{
     /**
-     * 声明一个AndroidSDK自带的数据库变量db
+     * AndroidSDK bring database db
      */
     private SQLiteDatabase db;
 
     /**
-     * 写一个这个类的构造函数，参数为上下文context，所谓上下文就是这个类所在包的路径
+     * This purpose for context for clinican, patient
      */
     public DBOpenHelper(Context context){
         super(context,"db_trace",null,1);
@@ -29,9 +29,9 @@ public class DBOpenHelper extends SQLiteOpenHelper{
     }
 
     /**
-     * 重写两个必须要重写的方法，因为class DBOpenHelper extends SQLiteOpenHelper
-     * 而这两个方法是 abstract 类 SQLiteOpenHelper 中声明的 abstract 方法
-     * 所以必须在子类 DBOpenHelper 中重写 abstract 方法
+     * Rewrite because class DBOpenHelper extends SQLiteOpenHelper
+     * This two pathways are abstract in abstract-SQLiteOpenHelper
+     * So it should rewrite abstract in DBOpenHelper
      * @param db
      */
     @Override
@@ -109,7 +109,7 @@ public class DBOpenHelper extends SQLiteOpenHelper{
     }
 
     /**
-     * 接下来写自定义的增删改查方法
+     * This is way for add or delete info
      */
     //添加新用户，即注册
     public boolean addPatient(Patient patient){
@@ -126,7 +126,7 @@ public class DBOpenHelper extends SQLiteOpenHelper{
         return db.insert("patients","_id",values)>0;
     }
 
-    //根据用户名找用户，可以判断注册时用户名是否已经存在
+    //Based on user for checking register existing
     public int findPatient(String patientid){
         int result=0;
         Cursor cursor = db.query("patients",null,"patientid='"+patientid+"'",null,null,null,null);

@@ -1,11 +1,11 @@
-arguments=
+arguments=--init-script /var/folders/z9/8qtn20f95l75kgnvzdv45yvw0000gn/T/init16972960437878154194.gradle --init-script /var/folders/z9/8qtn20f95l75kgnvzdv45yvw0000gn/T/init13923145195338888960.gradle
 auto.sync=false
 build.scans.enabled=false
 connection.gradle.distribution=GRADLE_DISTRIBUTION(WRAPPER)
 connection.project.dir=
 eclipse.preferences.version=1
 gradle.user.home=
-java.home=/Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home
+java.home=/Users/chenhsuanyu/Library/Java/JavaVirtualMachines/adopt-openjdk-14.0.2/Contents/Home
 jvm.arguments=
 offline.mode=false
 override.workspace.settings=true
